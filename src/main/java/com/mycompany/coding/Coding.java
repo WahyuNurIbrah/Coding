@@ -1,0 +1,54 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
+
+package com.mycompany.coding;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author Home
+ */
+public class Coding {
+
+    public double massa, kecepatan;
+
+    public double getMassa() {
+        return massa;
+    }
+
+    public void setMassa(double massa) {
+        this.massa = massa;
+    }
+
+    public double getKecepatan() {
+        return kecepatan;
+    }
+
+    public void setKecepatan(double kecepatan) {
+        this.kecepatan = kecepatan;
+    }
+    
+    //Fungsi Menghitung
+    public double hitung(){
+        return 0.5*massa*Math.pow(kecepatan,2);
+    }
+    
+    public static void main(String[] args) {
+        
+        Coding kinetik = new Coding();
+        
+        System.out.println("Masukkan Massa : ");
+        Scanner varMassa = new Scanner(System.in);
+        System.out.println("Masukkan kecepatan Benda : ");
+        Scanner varKecepatan = new Scanner(System.in);
+        
+        kinetik.setMassa(varMassa.nextDouble());
+        kinetik.setKecepatan(varKecepatan.nextDouble());
+        
+        
+        System.out.println(kinetik.hitung());
+    }
+    
+}
